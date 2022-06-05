@@ -4,6 +4,7 @@
 #include <algorithm>
 
 #include <glm/ext.hpp>
+#include <Profiler.hpp>
 
 SoftwareRenderer::SoftwareRenderer(int w, int h, SDL_Renderer* r) {
     width = w;
@@ -358,7 +359,9 @@ void SoftwareRenderer::drawMesh(Mesh& mesh, glm::mat4 model, Texture& tex) {
             float y3 = buff[i].v[2].pos.y;
             if ((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1) >= 0) continue;
 
+            Profiler::get().startRasterMeasure();
             rasterize(buff[i], tex);
+            Profiler::get().endRasterMeasure();
         }
     }
 }

@@ -4,6 +4,7 @@
 #include "Renderer.hpp"
 #include <iostream>
 
+#include <Profiler.hpp>
 
 const int Width = 1280, Height = 720;
 
@@ -29,7 +30,11 @@ int main(int argc, char** argv) {
     float angle = 0;
 
     bool running = 1;
+
+    float deltaTime = 0.f;
     while(running) {
+        Profiler::get().startFPSMeasure();
+
         SDL_Event ev;
         while(SDL_PollEvent(&ev)) {
             switch(ev.type) {
@@ -39,7 +44,7 @@ int main(int argc, char** argv) {
             }
         }
 
-        angle += 1.f;
+        angle += 90 * deltaTime;
 
         glm::mat4 r = glm::rotate(glm::mat4(1.f), glm::radians(angle), glm::vec3(0.f, 1.f, 0.f));
         glm::mat4 s = glm::scale(glm::mat4(1.f), glm::vec3(2.f, 2.f, 2.f));
@@ -48,13 +53,15 @@ int main(int argc, char** argv) {
 
         renderer->setLineColor(1, 0, 0);
 
-        glm::mat4 t = glm::translate(glm::mat4(1.f), glm::vec3(0, -2, -5));
+        glm::mat4 t = glm::translate(glm::mat4(1.f), glm::vec3(0, -2, -10));
         renderer->drawMesh(mesh, t * r * s, tex);
 
         renderer->display();
 
 
         SDL_RenderPresent(render);
+
+        deltaTime = 1.f / Profiler::get().endFPSMeasure();
     }
 
     delete renderer;
@@ -64,5 +71,7 @@ int main(int argc, char** argv) {
     SDL_DestroyRenderer(render);
     SDL_DestroyWindow(window);
     SDL_Quit();
+
+    Profiler::get().printResults();
     return 0;
 }
