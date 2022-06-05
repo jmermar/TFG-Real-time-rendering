@@ -1,4 +1,5 @@
 #pragma once 
+#include <string>
 #include <vector>
 #include <glm/glm.hpp>
 
@@ -12,3 +13,5 @@ struct Texture {
     int width, height;
     vector<Pixel> data;
 };
+
+Texture loadTexture(string file);

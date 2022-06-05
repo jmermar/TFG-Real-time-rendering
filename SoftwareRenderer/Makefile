@@ -1,4 +1,4 @@
-LINK := -lmingw32 -lSDL2main -lSDL2 -fopenmp
+LINK := -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -fopenmp
 ARGS := -std=c++11 -fopenmp -pthread -O2
 INCLUDE := -I ../include -I include
 BIN=../rasterizer.exe

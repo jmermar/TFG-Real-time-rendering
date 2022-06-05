@@ -268,7 +268,7 @@ float SoftwareRenderer::edgeFunction(glm::vec2& a, glm::vec2& b, glm::vec2& p) {
     return (a.x - b.x) * (p.y - a.y) - (a.y - b.y) * (p.x - a.x);
 }
 
-void SoftwareRenderer::rasterize(HomogenousTriangle t) {
+void SoftwareRenderer::rasterize(HomogenousTriangle t, Texture& tex) {
     Box bb;
     if (!isVisible(t.v[0], t.v[1], t.v[2], bb)) return;
 
@@ -276,9 +276,9 @@ void SoftwareRenderer::rasterize(HomogenousTriangle t) {
     t.v[1].pos.w = 1.f / t.v[1].pos.w;
     t.v[2].pos.w = 1.f / t.v[2].pos.w;
 
-    t.v[0].uv *= t.v[0].pos.w;
-    t.v[1].uv *= t.v[1].pos.w;
-    t.v[2].uv *= t.v[2].pos.w;
+    t.v[0].uv = t.v[0].uv * t.v[0].pos.w;
+    t.v[1].uv = t.v[1].uv * t.v[1].pos.w;
+    t.v[2].uv = t.v[2].uv * t.v[2].pos.w;
 
     glm::vec2 coords[3];
     coords[0] = ndc2sc(t.v[0].pos);
@@ -298,14 +298,21 @@ void SoftwareRenderer::rasterize(HomogenousTriangle t) {
 
             if (u < 0 || v < 0 || w < 0) continue;
 
-            float iz = t.v[0].pos.w * u + t.v[1].pos.w * v +t.v[2].pos.w * w;
-            float z = 1.f / iz;
 
+            float iz = t.v[0].pos.w * u + t.v[1].pos.w * v + t.v[2].pos.w * w;
+            float z = 1.f / iz;
             #pragma omp critical
             if (zbuffer[y * width + x] > z) {
-                buffer.data[y * width + x].r = 255;
-                buffer.data[y * width + x].g = 255;
-                buffer.data[y * width + x].b = 255;
+                // Perspective correct barycentrics
+                glm::vec2 texCoords = (t.v[0].uv * u + t.v[1].uv * v + t.v[2].uv * w) * z;
+                int tx = glm::clamp(texCoords.x, 0.f, 1.f) * (tex.width - 1);
+                int ty = glm::clamp(texCoords.y, 0.f, 1.f) * (tex.height - 1);
+
+                Pixel& color = tex.data[ty * tex.width + tx];
+
+                buffer.data[y * width + x].r = color.r;
+                buffer.data[y * width + x].g = color.g;
+                buffer.data[y * width + x].b = color.b;
 
                 zbuffer[y * width + x] = z;
             }
@@ -313,7 +320,7 @@ void SoftwareRenderer::rasterize(HomogenousTriangle t) {
     }
 }
 
-void SoftwareRenderer::drawMesh(Mesh& mesh, glm::mat4 model) {
+void SoftwareRenderer::drawMesh(Mesh& mesh, glm::mat4 model, Texture& tex) {
     glm::vec4 near(0.f, 0.f, 1.f, -projection[3][2] / (projection[2][2] - 1));
     mvp = projection * view * model;
     this->model = model;
@@ -339,8 +346,8 @@ void SoftwareRenderer::drawMesh(Mesh& mesh, glm::mat4 model) {
             buff[i].v[2].pos /= z3;
 
             buff[i].v[0].pos.w = z1;
-            buff[i].v[0].pos.w = z2;
-            buff[i].v[0].pos.w = z3;
+            buff[i].v[1].pos.w = z2;
+            buff[i].v[2].pos.w = z3;
 
             // Check if face is clock-wise
             float x1 = buff[i].v[0].pos.x;
@@ -351,7 +358,7 @@ void SoftwareRenderer::drawMesh(Mesh& mesh, glm::mat4 model) {
             float y3 = buff[i].v[2].pos.y;
             if ((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1) >= 0) continue;
 
-            rasterize(buff[i]);
+            rasterize(buff[i], tex);
         }
     }
 }

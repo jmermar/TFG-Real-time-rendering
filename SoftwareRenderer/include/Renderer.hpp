@@ -47,7 +47,7 @@ private:
     }
     
     inline float edgeFunction(glm::vec2&a, glm::vec2&b, glm::vec2&p);
-    inline void rasterize(HomogenousTriangle t);
+    inline void rasterize(HomogenousTriangle t, Texture& tex);
 
     inline HomogenousVertex intersection(HomogenousVertex& a, HomogenousVertex& b, glm::vec4& plane);
     inline bool isVisible(HomogenousVertex& a, HomogenousVertex& b, HomogenousVertex& c, Box& bb);
@@ -66,7 +66,7 @@ public:
 
     void clear(float r, float g, float b);
     void drawWireframe(Mesh& mesh, glm::mat4 model);
-    void drawMesh(Mesh& mesh, glm::mat4 model);
+    void drawMesh(Mesh& mesh, glm::mat4 model, Texture& tex);
 
     void display();
 };
