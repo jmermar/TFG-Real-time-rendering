@@ -4,7 +4,7 @@ using namespace std;
 class Profiler {
 public:
     struct Metric {
-        float min, max;
+        float min, max, average;
     };
 private:
     Profiler();
