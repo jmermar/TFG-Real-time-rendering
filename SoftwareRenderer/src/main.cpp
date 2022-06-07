@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
     renderer->setProjection(p);
 
     Mesh mesh = loadMesh("res/vikingroom.obj");
+    cout << "Cargada malla de " << mesh.triangles.size() * 3 << " vertices y " << mesh.triangles.size() << " caras" << endl;
     Texture tex = loadTexture("res/vikingroom_tex.png");
 
     bool running = 1;
