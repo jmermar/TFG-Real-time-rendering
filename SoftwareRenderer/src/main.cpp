@@ -17,7 +17,9 @@ int main(int argc, char** argv) {
     // 
     SoftwareRenderer* renderer = new SoftwareRenderer(Width, Height, render);
     glm::mat4 p = glm::perspectiveFov(90.f, (float)Width, (float)Height, 0.1f, 1000.f);
-    glm::vec3 camPos(0.f, 1.f, 5.f);
+    float camDis = 5.f;
+    float xRot = 0.f;
+    float yRot = 0.f;
     renderer->setProjection(p);
 
     Mesh mesh = loadMesh("res/vikingroom.obj");
@@ -42,18 +44,23 @@ int main(int argc, char** argv) {
         // User input
         const unsigned char* keys = SDL_GetKeyboardState(NULL);
         if (keys[SDL_SCANCODE_A])
-            camPos = glm::rotate(glm::mat4(1.f), glm::radians(-deltaTime * 45), glm::vec3(0, 1, 0)) * glm::vec4(camPos, 1.f);
+            yRot -= deltaTime * 45;
         if (keys[SDL_SCANCODE_D])
-            camPos = glm::rotate(glm::mat4(1.f), glm::radians(deltaTime * 45), glm::vec3(0, 1, 0)) * glm::vec4(camPos, 1.f);
+            yRot += deltaTime * 45;
         if (keys[SDL_SCANCODE_W])
-            camPos = camPos + glm::normalize(-camPos) * deltaTime;
+            camDis = glm::max(0.f, camDis - deltaTime);
         if (keys[SDL_SCANCODE_S])
-            camPos = camPos + glm::normalize(camPos) * deltaTime;
+            camDis = camDis + deltaTime;
         if (keys[SDL_SCANCODE_UP])
-            camPos.y += deltaTime;
+            xRot += deltaTime * 45;
         if (keys[SDL_SCANCODE_DOWN])
-            camPos.y -= deltaTime;
+            xRot -= deltaTime * 45;
 
+
+        glm::vec3 camPos = 
+            glm::rotate(glm::mat4(1.f), glm::radians(yRot), glm::vec3(0, 1, 0)) *
+            glm::rotate(glm::mat4(1.f), glm::radians(xRot), glm::vec3(1, 0, 0)) *
+            glm::vec4(0, 0, camDis, 0);
 
         // Rendering
         renderer->clear(0, 0, 0);
