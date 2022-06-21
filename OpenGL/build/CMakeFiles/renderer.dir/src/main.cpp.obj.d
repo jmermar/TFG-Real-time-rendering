@@ -189,4 +189,6 @@ CMakeFiles/renderer.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/SDL2/SDL_locale.h \
  C:/msys64/mingw64/include/SDL2/SDL_misc.h \
  C:/msys64/mingw64/include/SDL2/SDL_image.h \
- C:/msys64/mingw64/include/SDL2/SDL.h
+ C:/msys64/mingw64/include/SDL2/SDL.h \
+ F:/personal/uni/tfg/codigo/OpenGL/include/glad/glad.h \
+ F:/personal/uni/tfg/codigo/OpenGL/include/KHR/khrplatform.h

@@ -279,4 +279,6 @@ CMakeFiles/renderer.dir/src/Window.cpp.obj: \
  C:/msys64/mingw64/include/c++/11.3.0/bits/basic_ios.tcc \
  C:/msys64/mingw64/include/c++/11.3.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/11.3.0/istream \
- C:/msys64/mingw64/include/c++/11.3.0/bits/istream.tcc
+ C:/msys64/mingw64/include/c++/11.3.0/bits/istream.tcc \
+ F:/personal/uni/tfg/codigo/OpenGL/include/glad/glad.h \
+ F:/personal/uni/tfg/codigo/OpenGL/include/KHR/khrplatform.h
