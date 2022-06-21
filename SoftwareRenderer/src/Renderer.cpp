@@ -302,7 +302,6 @@ void SoftwareRenderer::rasterize(HomogenousTriangle t, Texture& tex) {
 
             float iz = t.v[0].pos.w * u + t.v[1].pos.w * v + t.v[2].pos.w * w;
             float z = 1.f / iz;
-            #pragma omp critical
             if (zbuffer[y * width + x] > z) {
                 // Perspective correct barycentrics
                 glm::vec2 texCoords = (t.v[0].uv * u + t.v[1].uv * v + t.v[2].uv * w) * z;

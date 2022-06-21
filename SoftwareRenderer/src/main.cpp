@@ -69,7 +69,7 @@ int main(int argc, char** argv) {
 
         Profiler::get().startRasterMeasure();
         renderer->drawMesh(mesh, glm::mat4(1.f), tex);
-        Profiler::get().endRasterMeasure();
+        float rasterTIme = Profiler::get().endRasterMeasure();
 
         renderer->display();
 
@@ -77,6 +77,10 @@ int main(int argc, char** argv) {
         SDL_RenderPresent(render);
 
         deltaTime = 1.f / Profiler::get().endFPSMeasure();
+
+        cout << "Raster time(ms): " << rasterTIme << endl;
+        cout << "Render time(ms): " << deltaTime << endl;
+        cout << "FPS: " << 1.f / deltaTime << endl;
     }
 
     delete renderer;

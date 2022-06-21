@@ -1,0 +1,3 @@
+F:/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles/renderer.dir
+F:/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles/edit_cache.dir
+F:/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles/rebuild_cache.dir
