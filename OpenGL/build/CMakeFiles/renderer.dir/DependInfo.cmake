@@ -9,8 +9,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "F:/personal/uni/tfg/codigo/OpenGL/src/glad.c" "CMakeFiles/renderer.dir/src/glad.c.obj" "gcc" "CMakeFiles/renderer.dir/src/glad.c.obj.d"
+  "F:/personal/uni/tfg/codigo/OpenGL/src/Mesh.cpp" "CMakeFiles/renderer.dir/src/Mesh.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/Mesh.cpp.obj.d"
+  "F:/personal/uni/tfg/codigo/OpenGL/src/MeshLoader.cpp" "CMakeFiles/renderer.dir/src/MeshLoader.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/MeshLoader.cpp.obj.d"
+  "F:/personal/uni/tfg/codigo/OpenGL/src/Shader.cpp" "CMakeFiles/renderer.dir/src/Shader.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/Shader.cpp.obj.d"
+  "F:/personal/uni/tfg/codigo/OpenGL/src/Texture.cpp" "CMakeFiles/renderer.dir/src/Texture.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/Texture.cpp.obj.d"
   "F:/personal/uni/tfg/codigo/OpenGL/src/Window.cpp" "CMakeFiles/renderer.dir/src/Window.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/Window.cpp.obj.d"
   "F:/personal/uni/tfg/codigo/OpenGL/src/main.cpp" "CMakeFiles/renderer.dir/src/main.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/main.cpp.obj.d"
+  "F:/personal/uni/tfg/codigo/OpenGL/src/tiny_obj_loader.cpp" "CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj.d"
   )
 
 # Targets to which this target links.

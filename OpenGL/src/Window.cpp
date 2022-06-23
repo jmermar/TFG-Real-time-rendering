@@ -1,5 +1,9 @@
 #include "Window.hpp"
+
 #include <iostream>
+
+#include <glad/glad.h>
+
 Window::Window(int w, int h) {
     width = w;
     height = h;
@@ -11,12 +15,35 @@ Window::Window(int w, int h) {
         cerr << "No se pudo crear la ventana"  << SDL_GetError() << endl;
         exit(-1);
     }
+
+    if (!loadContext()) {
+        cerr << "No se pudo crear el OpenGL context" << endl;
+        exit(-1);
+    }
 }
 
 Window::~Window() {
     SDL_DestroyWindow(win);
     IMG_Quit();
     SDL_Quit();
+}
+
+bool Window::loadContext() {
+    SDL_GL_SetAttribute( SDL_GL_CONTEXT_MAJOR_VERSION, 3 );
+    SDL_GL_SetAttribute( SDL_GL_CONTEXT_MINOR_VERSION, 3 );
+    SDL_GL_SetAttribute( SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+
+    context = SDL_GL_CreateContext(win);
+    if (context == NULL) return false;
+
+    if (!gladLoadGLLoader((GLADloadproc) SDL_GL_GetProcAddress)) {
+        SDL_GL_DeleteContext(context);
+        return false;
+    }
+
+    glEnable(GL_DEPTH_TEST);
+
+    return true;
 }
 
 bool Window::getKeyState(int key) {
@@ -47,5 +74,5 @@ int Window::getHeight() {
 }
 
 void Window::present() {
-    
+    SDL_GL_SwapWindow(win);
 }

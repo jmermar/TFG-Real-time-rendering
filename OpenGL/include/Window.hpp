@@ -5,10 +5,13 @@ using namespace std;
 class Window {
 private:
     SDL_Window* win;
+    SDL_GLContext context;
 
     const unsigned char* keys;
 
     int width, height;
+
+    bool loadContext();
 public:
     Window(int w, int h);
     ~Window();

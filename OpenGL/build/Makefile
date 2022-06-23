@@ -129,6 +129,102 @@ renderer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/build
 .PHONY : renderer/fast
 
+src/Mesh.obj: src/Mesh.cpp.obj
+.PHONY : src/Mesh.obj
+
+# target to build an object file
+src/Mesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Mesh.cpp.obj
+.PHONY : src/Mesh.cpp.obj
+
+src/Mesh.i: src/Mesh.cpp.i
+.PHONY : src/Mesh.i
+
+# target to preprocess a source file
+src/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Mesh.cpp.i
+.PHONY : src/Mesh.cpp.i
+
+src/Mesh.s: src/Mesh.cpp.s
+.PHONY : src/Mesh.s
+
+# target to generate assembly for a file
+src/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Mesh.cpp.s
+.PHONY : src/Mesh.cpp.s
+
+src/MeshLoader.obj: src/MeshLoader.cpp.obj
+.PHONY : src/MeshLoader.obj
+
+# target to build an object file
+src/MeshLoader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MeshLoader.cpp.obj
+.PHONY : src/MeshLoader.cpp.obj
+
+src/MeshLoader.i: src/MeshLoader.cpp.i
+.PHONY : src/MeshLoader.i
+
+# target to preprocess a source file
+src/MeshLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MeshLoader.cpp.i
+.PHONY : src/MeshLoader.cpp.i
+
+src/MeshLoader.s: src/MeshLoader.cpp.s
+.PHONY : src/MeshLoader.s
+
+# target to generate assembly for a file
+src/MeshLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MeshLoader.cpp.s
+.PHONY : src/MeshLoader.cpp.s
+
+src/Shader.obj: src/Shader.cpp.obj
+.PHONY : src/Shader.obj
+
+# target to build an object file
+src/Shader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Shader.cpp.obj
+.PHONY : src/Shader.cpp.obj
+
+src/Shader.i: src/Shader.cpp.i
+.PHONY : src/Shader.i
+
+# target to preprocess a source file
+src/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Shader.cpp.i
+.PHONY : src/Shader.cpp.i
+
+src/Shader.s: src/Shader.cpp.s
+.PHONY : src/Shader.s
+
+# target to generate assembly for a file
+src/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Shader.cpp.s
+.PHONY : src/Shader.cpp.s
+
+src/Texture.obj: src/Texture.cpp.obj
+.PHONY : src/Texture.obj
+
+# target to build an object file
+src/Texture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Texture.cpp.obj
+.PHONY : src/Texture.cpp.obj
+
+src/Texture.i: src/Texture.cpp.i
+.PHONY : src/Texture.i
+
+# target to preprocess a source file
+src/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Texture.cpp.i
+.PHONY : src/Texture.cpp.i
+
+src/Texture.s: src/Texture.cpp.s
+.PHONY : src/Texture.s
+
+# target to generate assembly for a file
+src/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Texture.cpp.s
+.PHONY : src/Texture.cpp.s
+
 src/Window.obj: src/Window.cpp.obj
 .PHONY : src/Window.obj
 
@@ -201,6 +297,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/tiny_obj_loader.obj: src/tiny_obj_loader.cpp.obj
+.PHONY : src/tiny_obj_loader.obj
+
+# target to build an object file
+src/tiny_obj_loader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj
+.PHONY : src/tiny_obj_loader.cpp.obj
+
+src/tiny_obj_loader.i: src/tiny_obj_loader.cpp.i
+.PHONY : src/tiny_obj_loader.i
+
+# target to preprocess a source file
+src/tiny_obj_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.i
+.PHONY : src/tiny_obj_loader.cpp.i
+
+src/tiny_obj_loader.s: src/tiny_obj_loader.cpp.s
+.PHONY : src/tiny_obj_loader.s
+
+# target to generate assembly for a file
+src/tiny_obj_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.s
+.PHONY : src/tiny_obj_loader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +330,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... renderer"
+	@echo "... src/Mesh.obj"
+	@echo "... src/Mesh.i"
+	@echo "... src/Mesh.s"
+	@echo "... src/MeshLoader.obj"
+	@echo "... src/MeshLoader.i"
+	@echo "... src/MeshLoader.s"
+	@echo "... src/Shader.obj"
+	@echo "... src/Shader.i"
+	@echo "... src/Shader.s"
+	@echo "... src/Texture.obj"
+	@echo "... src/Texture.i"
+	@echo "... src/Texture.s"
 	@echo "... src/Window.obj"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"
@@ -219,6 +351,9 @@ help:
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/tiny_obj_loader.obj"
+	@echo "... src/tiny_obj_loader.i"
+	@echo "... src/tiny_obj_loader.s"
 .PHONY : help
 
 
