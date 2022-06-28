@@ -6,13 +6,9 @@
 #include <vector>
 #include <string>
 
-using namespace std;
+#include "Structs.hpp"
 
-struct Vertex {
-    glm::vec3 pos;
-    glm::vec2 uv;
-    glm::vec3 norm;
-};
+using namespace std;
 
 class Mesh {
 private:

@@ -251,4 +251,5 @@ CMakeFiles/renderer.dir/src/Mesh.cpp.obj: \
  C:/msys64/mingw64/include/c++/11.3.0/cerrno \
  C:/msys64/mingw64/include/c++/11.3.0/bits/charconv.h \
  C:/msys64/mingw64/include/c++/11.3.0/bits/basic_string.tcc \
+ F:/personal/uni/tfg/codigo/OpenGL/include/Structs.hpp \
  F:/personal/uni/tfg/codigo/OpenGL/include/MeshLoader.hpp

@@ -129,6 +129,54 @@ renderer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/build
 .PHONY : renderer/fast
 
+src/Material.obj: src/Material.cpp.obj
+.PHONY : src/Material.obj
+
+# target to build an object file
+src/Material.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Material.cpp.obj
+.PHONY : src/Material.cpp.obj
+
+src/Material.i: src/Material.cpp.i
+.PHONY : src/Material.i
+
+# target to preprocess a source file
+src/Material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Material.cpp.i
+.PHONY : src/Material.cpp.i
+
+src/Material.s: src/Material.cpp.s
+.PHONY : src/Material.s
+
+# target to generate assembly for a file
+src/Material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Material.cpp.s
+.PHONY : src/Material.cpp.s
+
+src/MaterialTextured.obj: src/MaterialTextured.cpp.obj
+.PHONY : src/MaterialTextured.obj
+
+# target to build an object file
+src/MaterialTextured.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj
+.PHONY : src/MaterialTextured.cpp.obj
+
+src/MaterialTextured.i: src/MaterialTextured.cpp.i
+.PHONY : src/MaterialTextured.i
+
+# target to preprocess a source file
+src/MaterialTextured.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MaterialTextured.cpp.i
+.PHONY : src/MaterialTextured.cpp.i
+
+src/MaterialTextured.s: src/MaterialTextured.cpp.s
+.PHONY : src/MaterialTextured.s
+
+# target to generate assembly for a file
+src/MaterialTextured.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MaterialTextured.cpp.s
+.PHONY : src/MaterialTextured.cpp.s
+
 src/Mesh.obj: src/Mesh.cpp.obj
 .PHONY : src/Mesh.obj
 
@@ -273,29 +321,29 @@ src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
+src/mainPBR.obj: src/mainPBR.cpp.obj
+.PHONY : src/mainPBR.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+src/mainPBR.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainPBR.cpp.obj
+.PHONY : src/mainPBR.cpp.obj
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/mainPBR.i: src/mainPBR.cpp.i
+.PHONY : src/mainPBR.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/mainPBR.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainPBR.cpp.i
+.PHONY : src/mainPBR.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/mainPBR.s: src/mainPBR.cpp.s
+.PHONY : src/mainPBR.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/mainPBR.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainPBR.cpp.s
+.PHONY : src/mainPBR.cpp.s
 
 src/tiny_obj_loader.obj: src/tiny_obj_loader.cpp.obj
 .PHONY : src/tiny_obj_loader.obj
@@ -330,6 +378,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... renderer"
+	@echo "... src/Material.obj"
+	@echo "... src/Material.i"
+	@echo "... src/Material.s"
+	@echo "... src/MaterialTextured.obj"
+	@echo "... src/MaterialTextured.i"
+	@echo "... src/MaterialTextured.s"
 	@echo "... src/Mesh.obj"
 	@echo "... src/Mesh.i"
 	@echo "... src/Mesh.s"
@@ -348,9 +402,9 @@ help:
 	@echo "... src/glad.obj"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
-	@echo "... src/main.obj"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/mainPBR.obj"
+	@echo "... src/mainPBR.i"
+	@echo "... src/mainPBR.s"
 	@echo "... src/tiny_obj_loader.obj"
 	@echo "... src/tiny_obj_loader.i"
 	@echo "... src/tiny_obj_loader.s"
