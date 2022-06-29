@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
     mat->setProj(proj);
 
     vector<LightSource> lights;
-    lights.push_back({glm::vec3(0, 0, 5c), glm::vec3(100)});
+    lights.push_back({glm::vec3(0, 0, 5), glm::vec3(100)});
 
     mat->setLightSources(lights);
 
