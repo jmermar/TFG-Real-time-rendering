@@ -7,6 +7,11 @@ struct LightSource {
     glm::vec3 color;
 };
 
+struct Sun {
+    glm::vec3 dir;
+    glm::vec3 color;
+};
+
 struct Transform {
     glm::vec3 position, rotation, scale;
 };

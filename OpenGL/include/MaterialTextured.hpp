@@ -20,6 +20,7 @@ private:
 
     GLint lightPositions[4];
     GLint lightColors[4];
+    GLint sunLocation[2];
 
     GLint modelLocation, projLocation, viewLocation;
     GLint camPosLocation;
@@ -27,6 +28,8 @@ private:
     glm::vec3 camPos;
     glm::mat4 proj, view;
 public:
+    Sun sun;
+
     MaterialTextured(string texture);
     ~MaterialTextured();
 

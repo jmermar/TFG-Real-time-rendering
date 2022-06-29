@@ -2545,7 +2545,7 @@ CMakeFiles/renderer.dir/src/glad.c.obj: ../src/glad.c \
   C:/msys64/mingw64/include/mcx.h \
   C:/msys64/mingw64/include/imm.h
 
-CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj: ../src/mainTeapot.cpp \
+CMakeFiles/renderer.dir/src/mainPBR.cpp.obj: ../src/mainPBR.cpp \
   ../include/glad/glad.h \
   ../include/KHR/khrplatform.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.3.0/include/stdint.h \
@@ -3359,6 +3359,8 @@ C:/msys64/mingw64/include/rpcdcep.h:
 C:/msys64/mingw64/include/mmsystem.h:
 
 C:/msys64/mingw64/include/dlgs.h:
+
+../src/mainPBR.cpp:
 
 C:/msys64/mingw64/include/ddeml.h:
 
@@ -4283,8 +4285,6 @@ C:/msys64/mingw64/include/wchar.h:
 ../include/glm/ext/matrix_int2x4_sized.hpp:
 
 ../include/glm/ext/matrix_int3x2.hpp:
-
-../src/mainTeapot.cpp:
 
 ../include/glm/ext/matrix_int3x2_sized.hpp:
 

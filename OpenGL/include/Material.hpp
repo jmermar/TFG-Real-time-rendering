@@ -10,15 +10,11 @@ class Material {
 private:
     Shader* program;
 
-    glm::vec3 albedo;
-    float metallic;
-    float roughness;
-    float ao;
-
     vector<LightSource> lights;
 
     GLint lightPositions[4];
     GLint lightColors[4];
+    GLint sunLocation[2];
 
     GLint modelLocation, projLocation, viewLocation;
     GLint camPosLocation;
@@ -28,6 +24,13 @@ private:
     glm::vec3 camPos;
     glm::mat4 proj, view;
 public:
+    glm::vec3 albedo;
+    float metallic;
+    float roughness;
+    float ao;
+
+    Sun sun;
+
     Material(glm::vec3 a, float m, float r, float _ao);
     ~Material();
 

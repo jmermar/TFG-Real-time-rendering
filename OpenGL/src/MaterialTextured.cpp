@@ -13,6 +13,9 @@ MaterialTextured::MaterialTextured(string texFolder) {
 
     GLuint programId = program->getProgram();
 
+    sunLocation[0] = glGetUniformLocation(programId, "sunDir");
+    sunLocation[1] = glGetUniformLocation(programId, "sunColor");
+
     modelLocation = glGetUniformLocation(programId, "modelMatrix");
     viewLocation = glGetUniformLocation(programId, "viewMatrix");
     projLocation = glGetUniformLocation(programId, "projMatrix");
@@ -60,6 +63,9 @@ void MaterialTextured::start() {
 
 
     glUseProgram(program->getProgram());
+
+    glUniform3fv(sunLocation[0], 1, glm::value_ptr(sun.dir));
+    glUniform3fv(sunLocation[1], 1, glm::value_ptr(sun.color));
     
     
     glActiveTexture(GL_TEXTURE0);

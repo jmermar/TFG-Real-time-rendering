@@ -3,6 +3,7 @@
 #include <glm/ext.hpp>
 
 #include <iostream>
+#include <algorithm>
 
 #include "Window.hpp"
 #include "Mesh.hpp"
@@ -22,11 +23,16 @@ int main(int argc, char** argv) {
     glm::mat4 proj = glm::perspectiveFov(90.f, (float)Width, (float)Height, 0.1f, 1000.f);
 
     Mesh* teapot = new Mesh("res/models/teapot.obj");
-    Material* mat = new Material(glm::vec3(1, 0, 0), 1, 0.15, 1);
+    Material* mat = new Material(glm::vec3(1, 0, 0), 1, 0.4, 1);
     mat->setProj(proj);
 
     vector<LightSource> lights;
-    lights.push_back({glm::vec3(0, 0, 5), glm::vec3(100)});
+    //lights.push_back({glm::vec3(0, 0, 5), glm::vec3(200)});
+    //lights.push_back({glm::vec3(0, 5, 0), glm::vec3(200)});
+    //lights.push_back({glm::vec3(5, 5, -5), glm::vec3(200)});
+
+    mat->sun.dir = glm::vec3(0, -1, 0);
+    mat->sun.color = glm::vec3(1);
 
     mat->setLightSources(lights);
 
@@ -54,6 +60,16 @@ int main(int argc, char** argv) {
             xRot += deltaTime * 45;
         if (window->getKeyState(SDL_SCANCODE_DOWN))
             xRot -= deltaTime * 45;
+
+        if (window->getKeyState(SDL_SCANCODE_LEFT))
+            mat->metallic = max(0.f, mat->metallic - 0.5f * deltaTime);
+        if (window->getKeyState(SDL_SCANCODE_RIGHT))
+            mat->metallic = min(1.f, mat->metallic + 0.5f * deltaTime);
+
+        if (window->getKeyState(SDL_SCANCODE_Q))
+            mat->roughness = max(0.f, mat->roughness - 0.5f * deltaTime);
+        if (window->getKeyState(SDL_SCANCODE_E))
+            mat->roughness = min(1.f, mat->roughness + 0.5f * deltaTime);
 
         glm::vec3 camPos = 
             glm::rotate(glm::mat4(1.f), glm::radians(yRot), glm::vec3(0, 1, 0)) *

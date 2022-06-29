@@ -22,14 +22,19 @@ int main(int argc, char** argv) {
     glm::mat4 proj = glm::perspectiveFov(90.f, (float)Width, (float)Height, 0.1f, 1000.f);
 
     MaterialTextured* mat = new MaterialTextured("res/textures/rusted-steel");
-    Mesh* mesh = new Mesh("res/models/cube.obj");
+    Mesh* mesh = new Mesh("res/models/sphere.obj");
     mat->setProj(proj);
 
     vector<LightSource> lights;
-    lights.push_back({glm::vec3(-1, -1, 2), glm::vec3(150, 150, 150)});
-    lights.push_back({glm::vec3(1, 1, 2), glm::vec3(150, 150, 150)});
+    //lights.push_back({glm::vec3(-2, 2, 2), glm::vec3(10)});
+    //lights.push_back({glm::vec3(-2, 2, -2), glm::vec3(10)});
+    //lights.push_back({glm::vec3(2, 2, 2), glm::vec3(10)});
+    //lights.push_back({glm::vec3(2, 2, -2), glm::vec3(10)});
 
     mat->setLightSources(lights);
+
+    mat->sun.color = glm::vec3(10);
+    mat->sun.dir = glm::normalize(glm::vec3(0, -1, -1));
 
     Transform modelTransform;
     modelTransform.position = glm::vec3(0, 0, 0);

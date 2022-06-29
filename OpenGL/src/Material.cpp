@@ -12,6 +12,9 @@ Material::Material(glm::vec3 a, float m, float r, float _ao) {
 
     GLuint programId = program->getProgram();
 
+    sunLocation[0] = glGetUniformLocation(programId, "sunDir");
+    sunLocation[1] = glGetUniformLocation(programId, "sunColor");
+
     materialLocation[0] = glGetUniformLocation(programId, "albedo");
     materialLocation[1] = glGetUniformLocation(programId, "metallic");
     materialLocation[2] = glGetUniformLocation(programId, "roughness");
@@ -70,6 +73,9 @@ void Material::start() {
     glUniformMatrix4fv(viewLocation, 1, GL_FALSE, glm::value_ptr(view));
 
     glUniform3fv(camPosLocation, 1, glm::value_ptr(camPos));
+
+    glUniform3fv(sunLocation[0], 1, glm::value_ptr(sun.dir));
+    glUniform3fv(sunLocation[1], 1, glm::value_ptr(sun.color));
 
 
     for(int i = 0; i < 4; i++) {

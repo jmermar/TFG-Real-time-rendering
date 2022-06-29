@@ -415,6 +415,14 @@ CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj: \
  C:/msys64/mingw64/include/c++/11.3.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/11.3.0/istream \
  C:/msys64/mingw64/include/c++/11.3.0/bits/istream.tcc \
+ C:/msys64/mingw64/include/c++/11.3.0/algorithm \
+ C:/msys64/mingw64/include/c++/11.3.0/utility \
+ C:/msys64/mingw64/include/c++/11.3.0/bits/stl_relops.h \
+ C:/msys64/mingw64/include/c++/11.3.0/bits/stl_algo.h \
+ C:/msys64/mingw64/include/c++/11.3.0/bits/algorithmfwd.h \
+ C:/msys64/mingw64/include/c++/11.3.0/bits/stl_heap.h \
+ C:/msys64/mingw64/include/c++/11.3.0/bits/stl_tempbuf.h \
+ C:/msys64/mingw64/include/c++/11.3.0/bits/uniform_int_dist.h \
  F:/personal/uni/tfg/codigo/OpenGL/include/Window.hpp \
  C:/msys64/mingw64/include/SDL2/SDL.h \
  C:/msys64/mingw64/include/SDL2/SDL_main.h \
