@@ -2553,8 +2553,8 @@ CMakeFiles/renderer.dir/src/glad.c.obj
  C:/msys64/mingw64/include/mcx.h
  C:/msys64/mingw64/include/imm.h
 
-CMakeFiles/renderer.dir/src/mainPBR.cpp.obj
- F:/personal/uni/tfg/codigo/OpenGL/src/mainPBR.cpp
+CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj
+ F:/personal/uni/tfg/codigo/OpenGL/src/mainTeapot.cpp
  F:/personal/uni/tfg/codigo/OpenGL/include/glad/glad.h
  F:/personal/uni/tfg/codigo/OpenGL/include/KHR/khrplatform.h
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.3.0/include/stdint.h
