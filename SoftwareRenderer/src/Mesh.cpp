@@ -12,7 +12,7 @@ Vertex loadVertex(const tinyobj::attrib_t& attr, tinyobj::index_t idx) {
 
     if (idx.texcoord_index >= 0) {
         v.uv.x = attr.texcoords[2 * idx.texcoord_index];
-        v.uv.y = attr.texcoords[2 * idx.texcoord_index + 1];
+        v.uv.y = 1 - attr.texcoords[2 * idx.texcoord_index + 1];
     }
 
     return v;

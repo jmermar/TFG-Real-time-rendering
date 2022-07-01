@@ -62,7 +62,6 @@ vec3 fresnelSchlick(float cosTheta, vec3 F0)
     return F0 + (1.0 - F0) * pow(clamp(1.0 - cosTheta, 0.0, 1.0), 5.0);
 }
 // ----------------------------------------------------------------------------
-
 vec3 lightContribution(vec3 L, vec3 N, vec3 V, vec3 radiance) {
     // calculate reflectance at normal incidence; if dia-electric (like plastic) use F0 
     // of 0.04 and if it's a metal, use the albedo color as F0 (metallic workflow)    
@@ -95,7 +94,6 @@ vec3 lightContribution(vec3 L, vec3 N, vec3 V, vec3 radiance) {
 
     return (kD * albedo / PI + specular) * radiance * NdotL;  // note that we already multiplied the BRDF by the Fresnel (kS) so we won't multiply by kS again
 }
-
 // ----------------------------------------------------------------------------
 void main()
 {		

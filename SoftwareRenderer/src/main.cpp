@@ -22,9 +22,9 @@ int main(int argc, char** argv) {
     float yRot = 0.f;
     renderer->setProjection(p);
 
-    Mesh mesh = loadMesh("res/vikingroom.obj");
+    Mesh mesh = loadMesh("res/house.obj");
     cout << "Cargada malla de " << mesh.triangles.size() * 3 << " vertices y " << mesh.triangles.size() << " caras" << endl;
-    Texture tex = loadTexture("res/vikingroom_tex.png");
+    Texture tex = loadTexture("res/house_tex.png");
 
     bool running = 1;
 
@@ -68,7 +68,7 @@ int main(int argc, char** argv) {
         renderer->setView(glm::lookAt(camPos, glm::vec3(0.f), glm::vec3(0, 1, 0)));
 
         Profiler::get().startRasterMeasure();
-        renderer->drawMesh(mesh, glm::mat4(1.f), tex);
+        renderer->drawMesh(mesh, glm::scale(glm::mat4(1), glm::vec3(0.25f)), tex);
         float rasterTIme = Profiler::get().endRasterMeasure();
 
         renderer->display();
