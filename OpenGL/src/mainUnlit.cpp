@@ -24,8 +24,6 @@ int main(int argc, char** argv) {
     Mesh* mesh = new Mesh("res/models/house.obj");
     GLuint mvpMatrixUniform = glGetUniformLocation(shader->getProgram(), "mvpMatrix");
 
-    glm::mat4 model = glm::scale(glm::mat4(1), glm::vec3(0.25f));
-
     float camDis = 12.f;
     float xRot = -30.f;
     float yRot = 45.f;
@@ -41,9 +39,9 @@ int main(int argc, char** argv) {
         if (window->getKeyState(SDL_SCANCODE_D))
             yRot += deltaTime * 45;
         if (window->getKeyState(SDL_SCANCODE_W))
-            camDis = glm::max(0.f, camDis - deltaTime);
+            camDis = glm::max(0.f, camDis - deltaTime * 10.f);
         if (window->getKeyState(SDL_SCANCODE_S))
-            camDis = camDis + deltaTime;
+            camDis = camDis + deltaTime * 10.f;
         if (window->getKeyState(SDL_SCANCODE_UP))
             xRot += deltaTime * 45;
         if (window->getKeyState(SDL_SCANCODE_DOWN))
@@ -56,22 +54,26 @@ int main(int argc, char** argv) {
         
 
 
-        glm::mat4 mvp = p * glm::lookAt(camPos, glm::vec3(0), glm::vec3(0, 1, 0)) * model;
-
         glClearColor(0, 0, 0, 1);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glUseProgram(shader->getProgram());
         glBindTexture(GL_TEXTURE_2D, tex->getId());
 
-        glUniformMatrix4fv(mvpMatrixUniform, 1, GL_FALSE, glm::value_ptr(mvp));
-
-        int numIndices = mesh->getIndicesCount();
-
-        mesh->bind();
-
         uint32_t t = SDL_GetTicks();
-        glDrawElements(GL_TRIANGLES, mesh->getIndicesCount(), GL_UNSIGNED_INT, NULL);
+        for (int x = -10; x < 10; x++) {
+            for(int y = -10; y < 10; y++) {
+                glm::mat4 model = glm::translate(glm::mat4(1), glm::vec3(x, 0, y) * 15.f) * glm::scale(glm::mat4(1), glm::vec3(0.25f));
+                glm::mat4 mvp = p * glm::lookAt(camPos, glm::vec3(0), glm::vec3(0, 1, 0)) * model;
+
+                glUniformMatrix4fv(mvpMatrixUniform, 1, GL_FALSE, glm::value_ptr(mvp));
+
+                int numIndices = mesh->getIndicesCount();
+
+                mesh->bind();
+                glDrawElements(GL_TRIANGLES, mesh->getIndicesCount(), GL_UNSIGNED_INT, NULL);
+            }
+        }
         float rasterTime = SDL_GetTicks() - t;
 
         window->present();
@@ -81,7 +83,6 @@ int main(int argc, char** argv) {
         cout << "FPS: " << 1.f / deltaTime << endl;
         cout << "Render time: " << deltaTime * 1000.f << endl;
         cout << "Raster time: " << rasterTime << endl;
-        cout << "OpenGL_calls: " << gl_elapsed << endl;
     }
 
     delete mesh;

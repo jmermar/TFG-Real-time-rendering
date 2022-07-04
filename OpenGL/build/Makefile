@@ -297,29 +297,29 @@ src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
-src/mainUnlit.obj: src/mainUnlit.cpp.obj
-.PHONY : src/mainUnlit.obj
+src/mainTeapot.obj: src/mainTeapot.cpp.obj
+.PHONY : src/mainTeapot.obj
 
 # target to build an object file
-src/mainUnlit.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj
-.PHONY : src/mainUnlit.cpp.obj
+src/mainTeapot.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj
+.PHONY : src/mainTeapot.cpp.obj
 
-src/mainUnlit.i: src/mainUnlit.cpp.i
-.PHONY : src/mainUnlit.i
+src/mainTeapot.i: src/mainTeapot.cpp.i
+.PHONY : src/mainTeapot.i
 
 # target to preprocess a source file
-src/mainUnlit.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainUnlit.cpp.i
-.PHONY : src/mainUnlit.cpp.i
+src/mainTeapot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainTeapot.cpp.i
+.PHONY : src/mainTeapot.cpp.i
 
-src/mainUnlit.s: src/mainUnlit.cpp.s
-.PHONY : src/mainUnlit.s
+src/mainTeapot.s: src/mainTeapot.cpp.s
+.PHONY : src/mainTeapot.s
 
 # target to generate assembly for a file
-src/mainUnlit.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainUnlit.cpp.s
-.PHONY : src/mainUnlit.cpp.s
+src/mainTeapot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainTeapot.cpp.s
+.PHONY : src/mainTeapot.cpp.s
 
 src/tiny_obj_loader.obj: src/tiny_obj_loader.cpp.obj
 .PHONY : src/tiny_obj_loader.obj
@@ -375,9 +375,9 @@ help:
 	@echo "... src/glad.obj"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
-	@echo "... src/mainUnlit.obj"
-	@echo "... src/mainUnlit.i"
-	@echo "... src/mainUnlit.s"
+	@echo "... src/mainTeapot.obj"
+	@echo "... src/mainTeapot.i"
+	@echo "... src/mainTeapot.s"
 	@echo "... src/tiny_obj_loader.obj"
 	@echo "... src/tiny_obj_loader.i"
 	@echo "... src/tiny_obj_loader.s"

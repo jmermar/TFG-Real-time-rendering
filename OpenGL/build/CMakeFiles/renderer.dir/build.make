@@ -153,19 +153,19 @@ CMakeFiles/renderer.dir/src/Material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/Material.cpp.s"
 	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /F/personal/uni/tfg/codigo/OpenGL/src/Material.cpp -o CMakeFiles/renderer.dir/src/Material.cpp.s
 
-CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: CMakeFiles/renderer.dir/flags.make
-CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: ../src/mainUnlit.cpp
-CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj -MF CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj.d -o CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj -c /F/personal/uni/tfg/codigo/OpenGL/src/mainUnlit.cpp
+CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj: CMakeFiles/renderer.dir/flags.make
+CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj: ../src/mainTeapot.cpp
+CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj: CMakeFiles/renderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj"
+	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj -MF CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj.d -o CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj -c /F/personal/uni/tfg/codigo/OpenGL/src/mainTeapot.cpp
 
-CMakeFiles/renderer.dir/src/mainUnlit.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/mainUnlit.cpp.i"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /F/personal/uni/tfg/codigo/OpenGL/src/mainUnlit.cpp > CMakeFiles/renderer.dir/src/mainUnlit.cpp.i
+CMakeFiles/renderer.dir/src/mainTeapot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/mainTeapot.cpp.i"
+	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /F/personal/uni/tfg/codigo/OpenGL/src/mainTeapot.cpp > CMakeFiles/renderer.dir/src/mainTeapot.cpp.i
 
-CMakeFiles/renderer.dir/src/mainUnlit.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/mainUnlit.cpp.s"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /F/personal/uni/tfg/codigo/OpenGL/src/mainUnlit.cpp -o CMakeFiles/renderer.dir/src/mainUnlit.cpp.s
+CMakeFiles/renderer.dir/src/mainTeapot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/mainTeapot.cpp.s"
+	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /F/personal/uni/tfg/codigo/OpenGL/src/mainTeapot.cpp -o CMakeFiles/renderer.dir/src/mainTeapot.cpp.s
 
 CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj: ../src/tiny_obj_loader.cpp
@@ -203,7 +203,7 @@ renderer_OBJECTS = \
 "CMakeFiles/renderer.dir/src/Shader.cpp.obj" \
 "CMakeFiles/renderer.dir/src/Texture.cpp.obj" \
 "CMakeFiles/renderer.dir/src/Material.cpp.obj" \
-"CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj" \
+"CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj" \
 "CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj" \
 "CMakeFiles/renderer.dir/src/glad.c.obj"
 
@@ -216,7 +216,7 @@ renderer.exe: CMakeFiles/renderer.dir/src/MeshLoader.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/Shader.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/Texture.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/Material.cpp.obj
-renderer.exe: CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj
+renderer.exe: CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/glad.c.obj
 renderer.exe: CMakeFiles/renderer.dir/build.make

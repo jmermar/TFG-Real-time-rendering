@@ -2114,7 +2114,7 @@ CMakeFiles/renderer.dir/src/glad.c.obj: ../src/glad.c \
   C:/msys64/mingw64/include/mcx.h \
   C:/msys64/mingw64/include/imm.h
 
-CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: ../src/mainUnlit.cpp \
+CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj: ../src/mainTeapot.cpp \
   ../include/glad/glad.h \
   ../include/KHR/khrplatform.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.3.0/include/stdint.h \
@@ -2534,6 +2534,14 @@ CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: ../src/mainUnlit.cpp \
   C:/msys64/mingw64/include/c++/11.3.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/11.3.0/istream \
   C:/msys64/mingw64/include/c++/11.3.0/bits/istream.tcc \
+  C:/msys64/mingw64/include/c++/11.3.0/algorithm \
+  C:/msys64/mingw64/include/c++/11.3.0/utility \
+  C:/msys64/mingw64/include/c++/11.3.0/bits/stl_relops.h \
+  C:/msys64/mingw64/include/c++/11.3.0/bits/stl_algo.h \
+  C:/msys64/mingw64/include/c++/11.3.0/bits/algorithmfwd.h \
+  C:/msys64/mingw64/include/c++/11.3.0/bits/stl_heap.h \
+  C:/msys64/mingw64/include/c++/11.3.0/bits/stl_tempbuf.h \
+  C:/msys64/mingw64/include/c++/11.3.0/bits/uniform_int_dist.h \
   ../include/Window.hpp \
   C:/msys64/mingw64/include/SDL2/SDL.h \
   C:/msys64/mingw64/include/SDL2/SDL_main.h \
@@ -2692,7 +2700,8 @@ CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: ../src/mainUnlit.cpp \
   C:/msys64/mingw64/include/c++/11.3.0/bits/vector.tcc \
   ../include/Structs.hpp \
   ../include/Texture.hpp \
-  ../include/Shader.hpp
+  ../include/Shader.hpp \
+  ../include/Material.hpp
 
 CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj: ../src/tiny_obj_loader.cpp \
   ../include/tiny_obj_loader.h \
@@ -2865,8 +2874,6 @@ CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj: ../src/tiny_obj_loader.cpp 
 
 ../src/tiny_obj_loader.cpp:
 
-../src/mainUnlit.cpp:
-
 C:/msys64/mingw64/include/mcx.h:
 
 C:/msys64/mingw64/include/winsvc.h:
@@ -2947,6 +2954,8 @@ C:/msys64/mingw64/include/winuser.h:
 
 C:/msys64/mingw64/include/wingdi.h:
 
+C:/msys64/mingw64/include/c++/11.3.0/algorithm:
+
 C:/msys64/mingw64/include/timezoneapi.h:
 
 C:/msys64/mingw64/include/utilapiset.h:
@@ -2974,6 +2983,8 @@ C:/msys64/mingw64/include/namedpipeapi.h:
 C:/msys64/mingw64/include/memoryapi.h:
 
 C:/msys64/mingw64/include/libloaderapi.h:
+
+C:/msys64/mingw64/include/c++/11.3.0/bits/uniform_int_dist.h:
 
 C:/msys64/mingw64/include/jobapi.h:
 
@@ -3503,7 +3514,11 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.3.0/include/vaesintrin.h:
 
 ../include/glm/ext/quaternion_relational.hpp:
 
+C:/msys64/mingw64/include/c++/11.3.0/bits/stl_algo.h:
+
 C:/msys64/mingw64/include/sys/types.h:
+
+C:/msys64/mingw64/include/c++/11.3.0/bits/stl_heap.h:
 
 C:/msys64/mingw64/include/objbase.h:
 
@@ -3703,6 +3718,8 @@ C:/msys64/mingw64/include/pthread.h:
 
 C:/msys64/mingw64/include/wctype.h:
 
+C:/msys64/mingw64/include/c++/11.3.0/bits/algorithmfwd.h:
+
 C:/msys64/mingw64/include/c++/11.3.0/cfloat:
 
 C:/msys64/mingw64/include/c++/11.3.0/x86_64-w64-mingw32/bits/basic_file.h:
@@ -3852,6 +3869,8 @@ C:/msys64/mingw64/include/wchar.h:
 ../include/glm/ext/matrix_int2x4_sized.hpp:
 
 ../include/glm/ext/matrix_int3x2.hpp:
+
+../src/mainTeapot.cpp:
 
 ../include/glm/ext/matrix_int3x2_sized.hpp:
 
@@ -4166,6 +4185,8 @@ C:/msys64/mingw64/include/c++/11.3.0/bits/basic_ios.tcc:
 C:/msys64/mingw64/include/c++/11.3.0/bits/ostream.tcc:
 
 C:/msys64/mingw64/include/c++/11.3.0/istream:
+
+C:/msys64/mingw64/include/c++/11.3.0/bits/stl_tempbuf.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.3.0/include/stdarg.h:
 

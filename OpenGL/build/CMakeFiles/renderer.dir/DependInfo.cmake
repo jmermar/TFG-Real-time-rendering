@@ -15,7 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "F:/personal/uni/tfg/codigo/OpenGL/src/Shader.cpp" "CMakeFiles/renderer.dir/src/Shader.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/Shader.cpp.obj.d"
   "F:/personal/uni/tfg/codigo/OpenGL/src/Texture.cpp" "CMakeFiles/renderer.dir/src/Texture.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/Texture.cpp.obj.d"
   "F:/personal/uni/tfg/codigo/OpenGL/src/Window.cpp" "CMakeFiles/renderer.dir/src/Window.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/Window.cpp.obj.d"
-  "F:/personal/uni/tfg/codigo/OpenGL/src/mainUnlit.cpp" "CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj.d"
+  "F:/personal/uni/tfg/codigo/OpenGL/src/mainTeapot.cpp" "CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj.d"
   "F:/personal/uni/tfg/codigo/OpenGL/src/tiny_obj_loader.cpp" "CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj.d"
   )
 
