@@ -20,17 +20,18 @@ int main(int argc, char** argv) {
     glm::mat4 p = glm::perspectiveFov(90.f, (float)Width, (float)Height, 0.1f, 1000.f);
     
     Shader* shader = new Shader("res/shaders/unlit_vertex.glsl", "res/shaders/unlit_fragment.glsl");
-    Texture* tex = new Texture("res/textures/vikingroom_tex.png");
-    Mesh* mesh = new Mesh("res/models/sphere.obj");
+    Texture* tex = new Texture("res/textures/house_tex.png");
+    Mesh* mesh = new Mesh("res/models/house.obj");
     GLuint mvpMatrixUniform = glGetUniformLocation(shader->getProgram(), "mvpMatrix");
 
+    glm::mat4 model = glm::scale(glm::mat4(1), glm::vec3(0.25f));
 
-
-    float camDis = 5.f;
-    float xRot = 0.f;
-    float yRot = 0.f;
+    float camDis = 12.f;
+    float xRot = -30.f;
+    float yRot = 45.f;
 
     float deltaTime = 0;
+
 
     while(!window->shouldQuit()) {
         uint32_t ticks = SDL_GetTicks();
@@ -53,7 +54,9 @@ int main(int argc, char** argv) {
             glm::rotate(glm::mat4(1.f), glm::radians(xRot), glm::vec3(1, 0, 0)) *
             glm::vec4(0, 0, camDis, 0);
         
-        glm::mat4 mvp = p * glm::lookAt(camPos, glm::vec3(0), glm::vec3(0, 1, 0)) ;
+
+
+        glm::mat4 mvp = p * glm::lookAt(camPos, glm::vec3(0), glm::vec3(0, 1, 0)) * model;
 
         glClearColor(0, 0, 0, 1);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -67,11 +70,18 @@ int main(int argc, char** argv) {
 
         mesh->bind();
 
+        uint32_t t = SDL_GetTicks();
         glDrawElements(GL_TRIANGLES, mesh->getIndicesCount(), GL_UNSIGNED_INT, NULL);
+        float rasterTime = SDL_GetTicks() - t;
 
         window->present();
 
         deltaTime = (SDL_GetTicks() - ticks) / 1000.f;
+
+        cout << "FPS: " << 1.f / deltaTime << endl;
+        cout << "Render time: " << deltaTime * 1000.f << endl;
+        cout << "Raster time: " << rasterTime << endl;
+        cout << "OpenGL_calls: " << gl_elapsed << endl;
     }
 
     delete mesh;

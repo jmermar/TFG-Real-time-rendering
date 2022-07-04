@@ -17,9 +17,9 @@ int main(int argc, char** argv) {
     // 
     SoftwareRenderer* renderer = new SoftwareRenderer(Width, Height, render);
     glm::mat4 p = glm::perspectiveFov(90.f, (float)Width, (float)Height, 0.1f, 1000.f);
-    float camDis = 5.f;
-    float xRot = 0.f;
-    float yRot = 0.f;
+    float camDis = 12.f;
+    float xRot = -30.f;
+    float yRot = 45.f;
     renderer->setProjection(p);
 
     Mesh mesh = loadMesh("res/house.obj");
@@ -78,8 +78,8 @@ int main(int argc, char** argv) {
 
         deltaTime = 1.f / Profiler::get().endFPSMeasure();
 
-        cout << "Raster time(ms): " << rasterTIme << endl;
-        cout << "Render time(ms): " << deltaTime << endl;
+        cout << "Raster time(ms): " << rasterTIme * 1000.f << endl;
+        cout << "Render time(ms): " << deltaTime * 1000.f << endl;
         cout << "FPS: " << 1.f / deltaTime << endl;
     }
 

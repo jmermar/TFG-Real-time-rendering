@@ -20,6 +20,4 @@ struct Vertex {
     glm::vec3 pos;
     glm::vec2 uv;
     glm::vec3 norm;
-    glm::vec3 tangent;
-    glm::vec3 bitangent;
 };

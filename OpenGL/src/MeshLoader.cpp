@@ -3,24 +3,19 @@
 #include <iostream>
 
 namespace MeshLoader {
-    Vertex getVertex(tinyobj::attrib_t attrib, tinyobj::index_t index) {
-        Vertex v;
+    inline void getVertex(Vertex& v, const tinyobj::attrib_t& attrib, const tinyobj::index_t& index) {
         v.pos.x = attrib.vertices[index.vertex_index * 3 + 0];
         v.pos.y = attrib.vertices[index.vertex_index * 3 + 1];
         v.pos.z = attrib.vertices[index.vertex_index * 3 + 2];
 
         if (index.texcoord_index >= 0) {
             v.uv.x = attrib.texcoords[index.texcoord_index * 2 + 0];
-            v.uv.y = attrib.texcoords[index.texcoord_index * 2 + 1];
-        } else {
-            v.uv = glm::vec2(0);
+            v.uv.y = -attrib.texcoords[index.texcoord_index * 2 + 1];
         }
 
         v.norm.x = attrib.normals[index.normal_index * 3 + 0];
         v.norm.y = attrib.normals[index.normal_index * 3 + 1];
         v.norm.z = attrib.normals[index.normal_index * 3 + 2];
-
-        return v;
 }
 
     void loadMesh(string name, vector<Vertex>& vertices, vector<GLuint>& indices) {
@@ -48,33 +43,27 @@ namespace MeshLoader {
         // Iteramos las figuras
         for(int s = 0; s < shapes.size(); s++) {
             // Iteramos las caras
+            int idx = 0;
+            vertices.reserve(vertices.size() + shapes[s].mesh.num_face_vertices.size() * 3);
+            indices.reserve(indices.size() + shapes[s].mesh.num_face_vertices.size() * 3);
             for (int i = 0; i < shapes[s].mesh.num_face_vertices.size(); i++) {
-                Vertex v1 = getVertex(attrib, shapes[s].mesh.indices[i * 3 + 0]);
-                Vertex v2 = getVertex(attrib, shapes[s].mesh.indices[i * 3 + 1]);
-                Vertex v3 = getVertex(attrib, shapes[s].mesh.indices[i * 3 + 2]);
-
-                // http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/#computing-the-tangents-and-bitangents
-                glm::vec3 deltaPos1 = v3.pos - v1.pos;
-                glm::vec3 deltaPos2 = v2.pos - v1.pos;
-                glm::vec2 deltaUV1 = v3.uv - v1.uv;
-                glm::vec2 deltaUV2 = v2.uv - v1.uv;
-
-                //v1.norm = v2.norm = v3.norm = glm::normalize(glm::cross(deltaPos2, deltaPos1));
-
-                glm::vec3 tangent = (deltaPos1 * deltaUV2.y   - deltaPos2 * deltaUV1.y);
-                glm::vec3 bitangent = (deltaPos2 * deltaUV1.x   - deltaPos1 * deltaUV2.x);
-
-                v1.tangent = v2.tangent = v3.tangent = tangent;
-                v1.bitangent = v2.bitangent = v3.bitangent = bitangent;
+                Vertex v1;
+                getVertex(v1, attrib, shapes[s].mesh.indices[idx + 0]);
+                Vertex v2;
+                getVertex(v2, attrib, shapes[s].mesh.indices[idx + 1]);
+                Vertex v3;
+                getVertex(v3, attrib, shapes[s].mesh.indices[idx + 2]);
 
                 vertices.push_back(v1);
                 vertices.push_back(v2);
                 vertices.push_back(v3);
 
 
-                indices.push_back(i * 3 + 0);
-                indices.push_back(i * 3 + 1);
-                indices.push_back(i * 3 + 2);
+                indices.push_back(idx + 0);
+                indices.push_back(idx + 1);
+                indices.push_back(idx + 2);
+
+                idx += 3;
             }
         }
     }

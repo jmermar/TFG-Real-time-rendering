@@ -18,11 +18,9 @@ set(SRC ${SRC_DIR}/Window.cpp
         ${SRC_DIR}/Shader.cpp
         ${SRC_DIR}/Texture.cpp
         ${SRC_DIR}/Material.cpp
-        ${SRC_DIR}/MaterialTextured.cpp
 
 #        ${SRC_DIR}/mainTeapot.cpp
-#        ${SRC_DIR}/mainUnlit.cpp
-        ${SRC_DIR}/mainPBR.cpp
+        ${SRC_DIR}/mainUnlit.cpp
 
 
         ${SRC_DIR}/tiny_obj_loader.cpp

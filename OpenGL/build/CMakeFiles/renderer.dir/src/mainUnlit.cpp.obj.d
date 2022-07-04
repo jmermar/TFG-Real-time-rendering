@@ -569,5 +569,6 @@ CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: \
  C:/msys64/mingw64/include/c++/11.3.0/bits/stl_vector.h \
  C:/msys64/mingw64/include/c++/11.3.0/bits/stl_bvector.h \
  C:/msys64/mingw64/include/c++/11.3.0/bits/vector.tcc \
+ F:/personal/uni/tfg/codigo/OpenGL/include/Structs.hpp \
  F:/personal/uni/tfg/codigo/OpenGL/include/Texture.hpp \
  F:/personal/uni/tfg/codigo/OpenGL/include/Shader.hpp

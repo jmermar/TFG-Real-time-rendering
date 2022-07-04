@@ -10,7 +10,6 @@
 #include "Texture.hpp"
 #include "Shader.hpp"
 #include "Material.hpp"
-#include "MaterialTextured.hpp"
 
 using namespace std;
 
@@ -27,12 +26,12 @@ int main(int argc, char** argv) {
     mat->setProj(proj);
 
     vector<LightSource> lights;
-    //lights.push_back({glm::vec3(0, 0, 5), glm::vec3(200)});
-    //lights.push_back({glm::vec3(0, 5, 0), glm::vec3(200)});
-    //lights.push_back({glm::vec3(5, 5, -5), glm::vec3(200)});
+    lights.push_back({glm::vec3(0, 0, 5), glm::vec3(200)});
+    lights.push_back({glm::vec3(0, 5, 0), glm::vec3(200)});
+    lights.push_back({glm::vec3(5, 5, -5), glm::vec3(200)});
 
     mat->sun.dir = glm::vec3(0, -1, 0);
-    mat->sun.color = glm::vec3(1);
+    mat->sun.color = glm::vec3(0);
 
     mat->setLightSources(lights);
 

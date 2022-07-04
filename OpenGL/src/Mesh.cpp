@@ -46,12 +46,6 @@ void Mesh::generateData(vector<Vertex>& vertex, vector<unsigned int>& indices)
     
     glEnableVertexAttribArray(2);
     glVertexAttribPointer(2, 3, GL_FLOAT, GL_TRUE, sizeof(Vertex), (void*) (sizeof(glm::vec3) + sizeof(glm::vec2)));
-
-    glEnableVertexAttribArray(3);
-    glVertexAttribPointer(3, 3, GL_FLOAT, GL_TRUE, sizeof(Vertex), (void*) (2 * sizeof(glm::vec3) + sizeof(glm::vec2)));
-
-    glEnableVertexAttribArray(4);
-    glVertexAttribPointer(4, 3, GL_FLOAT, GL_TRUE, sizeof(Vertex), (void*) (3 * sizeof(glm::vec3) + sizeof(glm::vec2)));
 }
 
 void Mesh::loadVertex(string file, vector<Vertex>& vout, vector<unsigned int>& iout) {

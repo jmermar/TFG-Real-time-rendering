@@ -324,7 +324,7 @@ void SoftwareRenderer::drawMesh(Mesh& mesh, glm::mat4 model, Texture& tex) {
     glm::vec4 near(0.f, 0.f, 1.f, -projection[3][2] / (projection[2][2] - 1));
     mvp = projection * view * model;
     this->model = model;
-    #pragma omp parallel for num_threads(6)
+    //#pragma omp parallel for num_threads(6)
     for(int i = 0; i < mesh.triangles.size(); i++) {
         Triangle& original = mesh.triangles[i];
 

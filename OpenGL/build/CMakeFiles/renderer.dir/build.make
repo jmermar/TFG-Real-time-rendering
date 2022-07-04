@@ -153,38 +153,24 @@ CMakeFiles/renderer.dir/src/Material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/Material.cpp.s"
 	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /F/personal/uni/tfg/codigo/OpenGL/src/Material.cpp -o CMakeFiles/renderer.dir/src/Material.cpp.s
 
-CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj: CMakeFiles/renderer.dir/flags.make
-CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj: ../src/MaterialTextured.cpp
-CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj -MF CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj.d -o CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj -c /F/personal/uni/tfg/codigo/OpenGL/src/MaterialTextured.cpp
+CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: CMakeFiles/renderer.dir/flags.make
+CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: ../src/mainUnlit.cpp
+CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj: CMakeFiles/renderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj"
+	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj -MF CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj.d -o CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj -c /F/personal/uni/tfg/codigo/OpenGL/src/mainUnlit.cpp
 
-CMakeFiles/renderer.dir/src/MaterialTextured.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/MaterialTextured.cpp.i"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /F/personal/uni/tfg/codigo/OpenGL/src/MaterialTextured.cpp > CMakeFiles/renderer.dir/src/MaterialTextured.cpp.i
+CMakeFiles/renderer.dir/src/mainUnlit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/mainUnlit.cpp.i"
+	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /F/personal/uni/tfg/codigo/OpenGL/src/mainUnlit.cpp > CMakeFiles/renderer.dir/src/mainUnlit.cpp.i
 
-CMakeFiles/renderer.dir/src/MaterialTextured.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/MaterialTextured.cpp.s"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /F/personal/uni/tfg/codigo/OpenGL/src/MaterialTextured.cpp -o CMakeFiles/renderer.dir/src/MaterialTextured.cpp.s
-
-CMakeFiles/renderer.dir/src/mainPBR.cpp.obj: CMakeFiles/renderer.dir/flags.make
-CMakeFiles/renderer.dir/src/mainPBR.cpp.obj: ../src/mainPBR.cpp
-CMakeFiles/renderer.dir/src/mainPBR.cpp.obj: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/renderer.dir/src/mainPBR.cpp.obj"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/mainPBR.cpp.obj -MF CMakeFiles/renderer.dir/src/mainPBR.cpp.obj.d -o CMakeFiles/renderer.dir/src/mainPBR.cpp.obj -c /F/personal/uni/tfg/codigo/OpenGL/src/mainPBR.cpp
-
-CMakeFiles/renderer.dir/src/mainPBR.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/mainPBR.cpp.i"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /F/personal/uni/tfg/codigo/OpenGL/src/mainPBR.cpp > CMakeFiles/renderer.dir/src/mainPBR.cpp.i
-
-CMakeFiles/renderer.dir/src/mainPBR.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/mainPBR.cpp.s"
-	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /F/personal/uni/tfg/codigo/OpenGL/src/mainPBR.cpp -o CMakeFiles/renderer.dir/src/mainPBR.cpp.s
+CMakeFiles/renderer.dir/src/mainUnlit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/mainUnlit.cpp.s"
+	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /F/personal/uni/tfg/codigo/OpenGL/src/mainUnlit.cpp -o CMakeFiles/renderer.dir/src/mainUnlit.cpp.s
 
 CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj: ../src/tiny_obj_loader.cpp
 CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj"
 	/C/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj -MF CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj.d -o CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj -c /F/personal/uni/tfg/codigo/OpenGL/src/tiny_obj_loader.cpp
 
 CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/glad.c.obj: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/glad.c.obj: ../src/glad.c
 CMakeFiles/renderer.dir/src/glad.c.obj: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/renderer.dir/src/glad.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/renderer.dir/src/glad.c.obj"
 	/C/msys64/mingw64/bin/gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/glad.c.obj -MF CMakeFiles/renderer.dir/src/glad.c.obj.d -o CMakeFiles/renderer.dir/src/glad.c.obj -c /F/personal/uni/tfg/codigo/OpenGL/src/glad.c
 
 CMakeFiles/renderer.dir/src/glad.c.i: cmake_force
@@ -217,8 +203,7 @@ renderer_OBJECTS = \
 "CMakeFiles/renderer.dir/src/Shader.cpp.obj" \
 "CMakeFiles/renderer.dir/src/Texture.cpp.obj" \
 "CMakeFiles/renderer.dir/src/Material.cpp.obj" \
-"CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj" \
-"CMakeFiles/renderer.dir/src/mainPBR.cpp.obj" \
+"CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj" \
 "CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj" \
 "CMakeFiles/renderer.dir/src/glad.c.obj"
 
@@ -231,12 +216,11 @@ renderer.exe: CMakeFiles/renderer.dir/src/MeshLoader.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/Shader.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/Texture.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/Material.cpp.obj
-renderer.exe: CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj
-renderer.exe: CMakeFiles/renderer.dir/src/mainPBR.cpp.obj
+renderer.exe: CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/tiny_obj_loader.cpp.obj
 renderer.exe: CMakeFiles/renderer.dir/src/glad.c.obj
 renderer.exe: CMakeFiles/renderer.dir/build.make
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable renderer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/F/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable renderer.exe"
 	/C/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/renderer.dir/objects.a
 	/C/msys64/mingw64/bin/ar.exe qc CMakeFiles/renderer.dir/objects.a $(renderer_OBJECTS) $(renderer_EXTERNAL_OBJECTS)
 	/C/msys64/mingw64/bin/g++.exe -O2 -Wl,--whole-archive CMakeFiles/renderer.dir/objects.a -Wl,--no-whole-archive -o renderer.exe -Wl,--out-implib,librenderer.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lmingw32 -lopengl32 -lSDL2main -lSDL2 -lSDL2_image -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

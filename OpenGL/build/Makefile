@@ -153,30 +153,6 @@ src/Material.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/Material.cpp.s
 .PHONY : src/Material.cpp.s
 
-src/MaterialTextured.obj: src/MaterialTextured.cpp.obj
-.PHONY : src/MaterialTextured.obj
-
-# target to build an object file
-src/MaterialTextured.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MaterialTextured.cpp.obj
-.PHONY : src/MaterialTextured.cpp.obj
-
-src/MaterialTextured.i: src/MaterialTextured.cpp.i
-.PHONY : src/MaterialTextured.i
-
-# target to preprocess a source file
-src/MaterialTextured.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MaterialTextured.cpp.i
-.PHONY : src/MaterialTextured.cpp.i
-
-src/MaterialTextured.s: src/MaterialTextured.cpp.s
-.PHONY : src/MaterialTextured.s
-
-# target to generate assembly for a file
-src/MaterialTextured.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/MaterialTextured.cpp.s
-.PHONY : src/MaterialTextured.cpp.s
-
 src/Mesh.obj: src/Mesh.cpp.obj
 .PHONY : src/Mesh.obj
 
@@ -321,29 +297,29 @@ src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
-src/mainPBR.obj: src/mainPBR.cpp.obj
-.PHONY : src/mainPBR.obj
+src/mainUnlit.obj: src/mainUnlit.cpp.obj
+.PHONY : src/mainUnlit.obj
 
 # target to build an object file
-src/mainPBR.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainPBR.cpp.obj
-.PHONY : src/mainPBR.cpp.obj
+src/mainUnlit.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainUnlit.cpp.obj
+.PHONY : src/mainUnlit.cpp.obj
 
-src/mainPBR.i: src/mainPBR.cpp.i
-.PHONY : src/mainPBR.i
+src/mainUnlit.i: src/mainUnlit.cpp.i
+.PHONY : src/mainUnlit.i
 
 # target to preprocess a source file
-src/mainPBR.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainPBR.cpp.i
-.PHONY : src/mainPBR.cpp.i
+src/mainUnlit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainUnlit.cpp.i
+.PHONY : src/mainUnlit.cpp.i
 
-src/mainPBR.s: src/mainPBR.cpp.s
-.PHONY : src/mainPBR.s
+src/mainUnlit.s: src/mainUnlit.cpp.s
+.PHONY : src/mainUnlit.s
 
 # target to generate assembly for a file
-src/mainPBR.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainPBR.cpp.s
-.PHONY : src/mainPBR.cpp.s
+src/mainUnlit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/mainUnlit.cpp.s
+.PHONY : src/mainUnlit.cpp.s
 
 src/tiny_obj_loader.obj: src/tiny_obj_loader.cpp.obj
 .PHONY : src/tiny_obj_loader.obj
@@ -381,9 +357,6 @@ help:
 	@echo "... src/Material.obj"
 	@echo "... src/Material.i"
 	@echo "... src/Material.s"
-	@echo "... src/MaterialTextured.obj"
-	@echo "... src/MaterialTextured.i"
-	@echo "... src/MaterialTextured.s"
 	@echo "... src/Mesh.obj"
 	@echo "... src/Mesh.i"
 	@echo "... src/Mesh.s"
@@ -402,9 +375,9 @@ help:
 	@echo "... src/glad.obj"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
-	@echo "... src/mainPBR.obj"
-	@echo "... src/mainPBR.i"
-	@echo "... src/mainPBR.s"
+	@echo "... src/mainUnlit.obj"
+	@echo "... src/mainUnlit.i"
+	@echo "... src/mainUnlit.s"
 	@echo "... src/tiny_obj_loader.obj"
 	@echo "... src/tiny_obj_loader.i"
 	@echo "... src/tiny_obj_loader.s"

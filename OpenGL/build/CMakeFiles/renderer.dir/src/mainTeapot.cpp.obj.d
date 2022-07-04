@@ -580,5 +580,4 @@ CMakeFiles/renderer.dir/src/mainTeapot.cpp.obj: \
  F:/personal/uni/tfg/codigo/OpenGL/include/Structs.hpp \
  F:/personal/uni/tfg/codigo/OpenGL/include/Texture.hpp \
  F:/personal/uni/tfg/codigo/OpenGL/include/Shader.hpp \
- F:/personal/uni/tfg/codigo/OpenGL/include/Material.hpp \
- F:/personal/uni/tfg/codigo/OpenGL/include/MaterialTextured.hpp
+ F:/personal/uni/tfg/codigo/OpenGL/include/Material.hpp
