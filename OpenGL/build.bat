@@ -1,0 +1,1 @@
+MSBuild.exe build\%1.vcxproj /p:Configuration=%2

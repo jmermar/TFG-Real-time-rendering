@@ -3,5 +3,6 @@
     "files.associations": {
         "new": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "E:/Personal/proyectos/TFG-Real-time-rendering/OpenGL"
 }

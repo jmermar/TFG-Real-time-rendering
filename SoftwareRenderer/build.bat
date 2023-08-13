@@ -1,0 +1,1 @@
+MSBuild.exe build\rasterizer.vcxproj /p:Configuration=%1

@@ -1,3 +1,4 @@
-F:/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles/renderer.dir
-F:/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles/edit_cache.dir
-F:/personal/uni/tfg/codigo/OpenGL/build/CMakeFiles/rebuild_cache.dir
+E:/Personal/proyectos/TFG-Real-time-rendering/OpenGL/build/CMakeFiles/renderer_pbr.dir
+E:/Personal/proyectos/TFG-Real-time-rendering/OpenGL/build/CMakeFiles/renderer_tex.dir
+E:/Personal/proyectos/TFG-Real-time-rendering/OpenGL/build/CMakeFiles/ALL_BUILD.dir
+E:/Personal/proyectos/TFG-Real-time-rendering/OpenGL/build/CMakeFiles/ZERO_CHECK.dir

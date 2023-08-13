@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
-project(renderer)
+project(renderer_pbr)
+project(renderer_tex)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
@@ -10,34 +11,43 @@ set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
 set(INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-include_directories(${INCLUDE_DIR})
-
 set(SRC ${SRC_DIR}/Window.cpp
         ${SRC_DIR}/Mesh.cpp
         ${SRC_DIR}/MeshLoader.cpp
         ${SRC_DIR}/Shader.cpp
         ${SRC_DIR}/Texture.cpp
         ${SRC_DIR}/Material.cpp
-
-        ${SRC_DIR}/mainTeapot.cpp
-#        ${SRC_DIR}/mainUnlit.cpp
-
-
         ${SRC_DIR}/tiny_obj_loader.cpp
         ${SRC_DIR}/glad.c)
 
-# Executable definition
-add_executable(${PROJECT_NAME} ${SRC})
-target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}" "${INCLUDE_DIR}")
-set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
+include_directories(${INCLUDE_DIR})
 
-# SDL2 Windows
-if (WIN32)
-	target_link_libraries(${PROJECT_NAME} mingw32.lib opengl32.lib SDL2main.lib SDL2.lib SDL2_image.lib)
-endif()
+if (CMAKE_GENERATOR_INSTANCE MATCHES "Visual Studio")
+        find_package(SDL2 CONFIG REQUIRED)
+        find_package(SDL2_image CONFIG REQUIRED)
 
-# SDL2 Mac OS X
-if (APPLE)
-    find_package(SDL2 REQUIRED)
-    target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY})
+        add_executable(renderer_pbr ${SRC} src/mainTeapot.cpp)
+        target_include_directories(renderer_pbr PRIVATE "${SRC_DIR}" "${INCLUDE_DIR}")
+        set_property(TARGET renderer_pbr PROPERTY CXX_STANDARD 11)
+        target_link_libraries(
+                renderer_pbr
+                PRIVATE
+                SDL2::SDL2
+                SDL2::SDL2main
+                SDL2_image::SDL2_image
+        )
+
+        add_executable(renderer_tex ${SRC} src/mainUnlit.cpp)
+        target_include_directories(renderer_tex PRIVATE "${SRC_DIR}" "${INCLUDE_DIR}")
+        set_property(TARGET renderer_tex PROPERTY CXX_STANDARD 11)
+        target_link_libraries(
+                renderer_tex
+                PRIVATE
+                SDL2::SDL2
+                SDL2::SDL2main
+                SDL2_image::SDL2_image
+        )
+elseif (APPLE)
+        find_package(SDL2 REQUIRED)
+        target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY})
 endif()
