@@ -24,4 +24,4 @@ The PBR renderer let you tweak different material properties that affected how l
 
 I have refactored the projects in order to be able to build them on windows using cmake and MSBuild, however I do not still support building the projects for other platforms, altough it won't be extremly difficult to tweak them in order to be able to do that.
 
-All projects have scripts for compile and run them with MSBuild, however I don't have a script for generating the MSBuild projects from CMake as I do that from Visual Studio Code Cmake extension.
+All projects have scripts to compile and run them with MSBuild, however I don't have a script for generating the MSBuild projects from CMake as I do that from Visual Studio Code Cmake extension.
