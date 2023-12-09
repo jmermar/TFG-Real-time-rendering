@@ -1,8 +1,8 @@
 # TFG-Real-time-rendering
 
-This project consists on three renderings that I did for my final project in University, each one being a rasterizer with explores some aspect of real-time rendering.
+This project consists on three rendering engines that I made for my final project in University, each one being a rasterizer with explores some aspect of real-time rendering.
 
-My final project consisted on an overview of most elemental real-time graphics algorithms, as well as explainings it's limitiation on implementing them on CPU an the reasons why GPU is much better for this kind of tasks, so the projects are mostly examples that ilustrates the conclusions of the documentation, thats why I've chosen to left the projects as their are, and possibly expanding it's concepts in new projects that I will make.
+My final project consisted on an overview of most elemental real-time graphics algorithms, as well as explainings it's limitiation on implementing them on CPU and the reasons why GPU is much better for this kind of task, so the projects are mostly examples that ilustrates the conclusions of the documentation, thats why I've chosen to left the projects as their are, and possibly expanding it's concepts in new projects that I will make.
 
 The projects are:
 
